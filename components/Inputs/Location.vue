@@ -36,6 +36,7 @@
             class="mr-5 mt-2 mb-1"
             :content="$store.getters.report_locations(item.id)"
             inline
+            color="blue lighten-5 indigo--text"
           >
             {{ item.name }}
           </v-badge>

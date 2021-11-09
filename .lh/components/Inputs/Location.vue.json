@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 18,
             "patches": [
                 {
                     "date": 1636486855031,
@@ -24,6 +24,62 @@
                 {
                     "date": 1636486940737,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n           <v-badge\n             class=\"mr-5 mt-2 mb-1\"\n             bordered\n             color=\"info\"\n-            :content=\"item.id\"\n+            :content=\"$store.getters.report_locations(item.id)\"\n             overlap\n           >\n             <v-btn\n               class=\"white--text\"\n"
+                },
+                {
+                    "date": 1636487818657,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,14 @@\n           </v-badge>\n         </template>\n \n         <template v-slot:item=\"{ item }\">\n-          <v-badge class=\"mr-5 mt-2 mb-1\" :content=\"item.id\" inline>\n+          <v-badge\n+            class=\"mr-5 mt-2 mb-1\"\n+            :content=\"$store.getters.report_locations(item.id)\"\n+            inline\n+            color=\"info\"\n+          >\n             {{ item.name }}\n           </v-badge>\n         </template>\n       </v-combobox>\n"
+                },
+                {
+                    "date": 1636487828702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n           <v-badge\n             class=\"mr-5 mt-2 mb-1\"\n             :content=\"$store.getters.report_locations(item.id)\"\n             inline\n-            color=\"info\"\n+            color=\"gray \"\n           >\n             {{ item.name }}\n           </v-badge>\n         </template>\n"
+                },
+                {
+                    "date": 1636487847259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,10 +34,10 @@\n         <template v-slot:item=\"{ item }\">\n           <v-badge\n             class=\"mr-5 mt-2 mb-1\"\n             :content=\"$store.getters.report_locations(item.id)\"\n-            inline\n-            color=\"gray \"\n+            inline \n+            out\n           >\n             {{ item.name }}\n           </v-badge>\n         </template>\n"
+                },
+                {
+                    "date": 1636487863516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n           <v-badge\n             class=\"mr-5 mt-2 mb-1\"\n             :content=\"$store.getters.report_locations(item.id)\"\n             inline \n-            out\n+            outt\n           >\n             {{ item.name }}\n           </v-badge>\n         </template>\n"
+                },
+                {
+                    "date": 1636487872804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,16 +31,16 @@\n           </v-badge>\n         </template>\n \n         <template v-slot:item=\"{ item }\">\n-          <v-badge\n+          <v-pill\n             class=\"mr-5 mt-2 mb-1\"\n             :content=\"$store.getters.report_locations(item.id)\"\n-            inline \n-            outt\n+            inline\n+            outtlined\n           >\n             {{ item.name }}\n-          </v-badge>\n+          </v-pill>\n         </template>\n       </v-combobox>\n     </v-card-text>\n   </div>\n"
+                },
+                {
+                    "date": 1636487958360,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,16 +31,16 @@\n           </v-badge>\n         </template>\n \n         <template v-slot:item=\"{ item }\">\n-          <v-pill\n+          <v-badge\n             class=\"mr-5 mt-2 mb-1\"\n             :content=\"$store.getters.report_locations(item.id)\"\n             inline\n-            outtlined\n+            color=\"blue lighten-5\"\n           >\n             {{ item.name }}\n-          </v-pill>\n+          </v-badge>\n         </template>\n       </v-combobox>\n     </v-card-text>\n   </div>\n"
+                },
+                {
+                    "date": 1636487972598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n           <v-badge\n             class=\"mr-5 mt-2 mb-1\"\n             :content=\"$store.getters.report_locations(item.id)\"\n             inline\n-            color=\"blue lighten-5\"\n+            color=\"blue lighten-5 \"\n           >\n             {{ item.name }}\n           </v-badge>\n         </template>\n"
+                },
+                {
+                    "date": 1636487978855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n           <v-badge\n             class=\"mr-5 mt-2 mb-1\"\n             :content=\"$store.getters.report_locations(item.id)\"\n             inline\n-            color=\"blue lighten-5 \"\n+            color=\"blue lighten-5 blue--text\"\n           >\n             {{ item.name }}\n           </v-badge>\n         </template>\n"
+                },
+                {
+                    "date": 1636487988195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n           <v-badge\n             class=\"mr-5 mt-2 mb-1\"\n             :content=\"$store.getters.report_locations(item.id)\"\n             inline\n-            color=\"blue lighten-5 blue--text\"\n+            color=\"blue lighten-5 gray--text\"\n           >\n             {{ item.name }}\n           </v-badge>\n         </template>\n"
+                },
+                {
+                    "date": 1636487998312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n           <v-badge\n             class=\"mr-5 mt-2 mb-1\"\n             :content=\"$store.getters.report_locations(item.id)\"\n             inline\n-            color=\"blue lighten-5 gray--text\"\n+            color=\"blue lighten-5 balck--text\"\n           >\n             {{ item.name }}\n           </v-badge>\n         </template>\n"
+                },
+                {
+                    "date": 1636488035052,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n           <v-badge\n             class=\"mr-5 mt-2 mb-1\"\n             :content=\"$store.getters.report_locations(item.id)\"\n             inline\n-            color=\"blue lighten-5 balck--text\"\n+            color=\"blue lighten-5 white--text\"\n           >\n             {{ item.name }}\n           </v-badge>\n         </template>\n"
+                },
+                {
+                    "date": 1636488056297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n           <v-badge\n             class=\"mr-5 mt-2 mb-1\"\n             :content=\"$store.getters.report_locations(item.id)\"\n             inline\n-            color=\"blue lighten-5 white--text\"\n+            color=\"blue lighten-5 red--text\"\n           >\n             {{ item.name }}\n           </v-badge>\n         </template>\n"
+                },
+                {
+                    "date": 1636488072317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n           <v-badge\n             class=\"mr-5 mt-2 mb-1\"\n             :content=\"$store.getters.report_locations(item.id)\"\n             inline\n-            color=\"blue lighten-5 red--text\"\n+            color=\"blue lighten-5 purple--text\"\n           >\n             {{ item.name }}\n           </v-badge>\n         </template>\n"
+                },
+                {
+                    "date": 1636488082762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n           <v-badge\n             class=\"mr-5 mt-2 mb-1\"\n             :content=\"$store.getters.report_locations(item.id)\"\n             inline\n-            color=\"blue lighten-5 purple--text\"\n+            color=\"blue lighten-5 indigo--text\"\n           >\n             {{ item.name }}\n           </v-badge>\n         </template>\n"
                 }
             ],
             "date": 1636486855031,
