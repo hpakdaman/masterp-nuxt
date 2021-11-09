@@ -1,0 +1,194 @@
+{
+    "sourceFile": "store/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 44,
+            "patches": [
+                {
+                    "date": 1636485515258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1636485576896,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,11 @@\n   },\n   count_formatted(state, getters) {\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n-  report_countir\n+  report_countires(){\n+    \n+  }\n };\n \n export const mutations = {\n   appendProgram(state, programs) {\n"
+                },
+                {
+                    "date": 1636485595992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,11 +16,9 @@\n   },\n   count_formatted(state, getters) {\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n-  report_countires(){\n-    \n-  }\n+  report_countires\n };\n \n export const mutations = {\n   appendProgram(state, programs) {\n"
+                },
+                {
+                    "date": 1636485605400,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,11 @@\n   },\n   count_formatted(state, getters) {\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n-  report_countires\n+  report_countires: () => () => {\n+    \n+  }\n };\n \n export const mutations = {\n   appendProgram(state, programs) {\n"
+                },
+                {
+                    "date": 1636485612146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   },\n   count_formatted(state, getters) {\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n-  report_countires: () => () => {\n+  report_countires: (state) => (id) => {\n     \n   }\n };\n \n"
+                },
+                {
+                    "date": 1636485628422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   },\n   count_formatted(state, getters) {\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n-  report_countires: (state) => (id) => {\n+  report_de: (state) => (id) => {\n     \n   }\n };\n \n"
+                },
+                {
+                    "date": 1636485636206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,11 +16,10 @@\n   },\n   count_formatted(state, getters) {\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n-  report_de: (state) => (id) => {\n-    \n-  }\n+  report_disciplines: (state) => (id) => {},\n+}\n };\n \n export const mutations = {\n   appendProgram(state, programs) {\n"
+                },
+                {
+                    "date": 1636485651581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,10 +16,11 @@\n   },\n   count_formatted(state, getters) {\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n-  report_disciplines: (state) => (id) => {},\n-}\n+  report_disciplines: (state) => (id) => {\n+    return \n+  },\n };\n \n export const mutations = {\n   appendProgram(state, programs) {\n"
+                },
+                {
+                    "date": 1636485698665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n   count_formatted(state, getters) {\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n   report_disciplines: (state) => (id) => {\n-    return \n+    found= \n   },\n };\n \n export const mutations = {\n"
+                },
+                {
+                    "date": 1636485708536,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n   count_formatted(state, getters) {\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n   report_disciplines: (state) => (id) => {\n-    found= \n+    found=state.report \n   },\n };\n \n export const mutations = {\n"
+                },
+                {
+                    "date": 1636485714345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n   count_formatted(state, getters) {\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n   report_disciplines: (state) => (id) => {\n-    found=state.report \n+    if() \n   },\n };\n \n export const mutations = {\n"
+                },
+                {
+                    "date": 1636485721816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,11 @@\n   count_formatted(state, getters) {\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n   report_disciplines: (state) => (id) => {\n-    if() \n+    if (state.report) {\n+      \n+    }\n   },\n };\n \n export const mutations = {\n"
+                },
+                {
+                    "date": 1636485732627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n   count_formatted(state, getters) {\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n   report_disciplines: (state) => (id) => {\n-    if (state.report) {\n+    if (state.report.byC) {\n       \n     }\n   },\n };\n"
+                },
+                {
+                    "date": 1636485741103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,10 @@\n   count_formatted(state, getters) {\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n   report_disciplines: (state) => (id) => {\n-    if (state.report.byC) {\n-      \n+    if (state.report.byDisciplines) {\n+      found = state.report;\n     }\n   },\n };\n \n"
+                },
+                {
+                    "date": 1636485748547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n   count_formatted(state, getters) {\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n   report_disciplines: (state) => (id) => {\n-    if (state.report.byDisciplines) {\n+    if (state.report.byDisciplines !) {\n       found = state.report;\n     }\n   },\n };\n"
+                },
+                {
+                    "date": 1636485755743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n   count_formatted(state, getters) {\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n   report_disciplines: (state) => (id) => {\n-    if (state.report.byDisciplines !) {\n+    if (typeof state.report.byDisciplines != undefined) {\n       found = state.report;\n     }\n   },\n };\n"
+                },
+                {
+                    "date": 1636485761067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n   report_disciplines: (state) => (id) => {\n     if (typeof state.report.byDisciplines != undefined) {\n-      found = state.report;\n+      found = state.report.find();\n     }\n   },\n };\n \n"
+                },
+                {
+                    "date": 1636485768693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n   report_disciplines: (state) => (id) => {\n     if (typeof state.report.byDisciplines != undefined) {\n-      found = state.report.find();\n+      found = state.report.find(item=> item.id);\n     }\n   },\n };\n \n"
+                },
+                {
+                    "date": 1636485775593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,10 @@\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n   report_disciplines: (state) => (id) => {\n     if (typeof state.report.byDisciplines != undefined) {\n-      found = state.report.find(item=> item.id);\n+      found = state.report.find((item) => item.id == id);\n+      \n     }\n   },\n };\n \n"
+                },
+                {
+                    "date": 1636485792791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   },\n   report_disciplines: (state) => (id) => {\n     if (typeof state.report.byDisciplines != undefined) {\n       found = state.report.find((item) => item.id == id);\n-      \n+      return found ? item.count : 0;\n     }\n   },\n };\n \n"
+                },
+                {
+                    "date": 1636486013137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,11 +18,12 @@\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n   report_disciplines: (state) => (id) => {\n     if (typeof state.report.byDisciplines != undefined) {\n-      found = state.report.find((item) => item.id == id);\n+      found = state.report.byDisciplines.find((item) => item.id == id);\n       return found ? item.count : 0;\n     }\n+    return 0;\n   },\n };\n \n export const mutations = {\n"
+                },
+                {
+                    "date": 1636486032647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,9 @@\n   },\n   report_disciplines: (state) => (id) => {\n     if (typeof state.report.byDisciplines != undefined) {\n       found = state.report.byDisciplines.find((item) => item.id == id);\n+      console.log(found);\n       return found ? item.count : 0;\n     }\n     return 0;\n   },\n"
+                },
+                {
+                    "date": 1636486045614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n   report_disciplines: (state) => (id) => {\n     if (typeof state.report.byDisciplines != undefined) {\n-      found = state.report.byDisciplines.find((item) => item.id == id);\n+      const found = state.report.byDisciplines.find((item) => item.id == id);\n       console.log(found);\n       return found ? item.count : 0;\n     }\n     return 0;\n"
+                },
+                {
+                    "date": 1636486061892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n   report_disciplines: (state) => (id) => {\n     if (typeof state.report.byDisciplines != undefined) {\n+      console\n       const found = state.report.byDisciplines.find((item) => item.id == id);\n       console.log(found);\n       return found ? item.count : 0;\n     }\n"
+                },
+                {
+                    "date": 1636486083435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,10 +18,10 @@\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n   report_disciplines: (state) => (id) => {\n     if (typeof state.report.byDisciplines != undefined) {\n-      console\n-      const found = state.report.byDisciplines.find((item) => item.id == id);\n+      console.log(state.report.byDisciplines);\n+      const found = state.report.byDisciplines.find((item) => parese == id);\n       console.log(found);\n       return found ? item.count : 0;\n     }\n     return 0;\n"
+                },
+                {
+                    "date": 1636486088721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,11 @@\n   },\n   report_disciplines: (state) => (id) => {\n     if (typeof state.report.byDisciplines != undefined) {\n       console.log(state.report.byDisciplines);\n-      const found = state.report.byDisciplines.find((item) => parese == id);\n+      const found = state.report.byDisciplines.find(\n+        (item) => parseInt(item.id) == id\n+      );\n       console.log(found);\n       return found ? item.count : 0;\n     }\n     return 0;\n"
+                },
+                {
+                    "date": 1636486113450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,13 +18,11 @@\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n   report_disciplines: (state) => (id) => {\n     if (typeof state.report.byDisciplines != undefined) {\n-      console.log(state.report.byDisciplines);\n       const found = state.report.byDisciplines.find(\n         (item) => parseInt(item.id) == id\n       );\n-      console.log(found);\n       return found ? item.count : 0;\n     }\n     return 0;\n   },\n"
+                },
+                {
+                    "date": 1636486252920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   },\n   report_disciplines: (state) => (id) => {\n     if (typeof state.report.byDisciplines != undefined) {\n       const found = state.report.byDisciplines.find(\n-        (item) => parseInt(item.id) == id\n+        (item) => parseInt(item._id) == id\n       );\n       return found ? item.count : 0;\n     }\n     return 0;\n"
+                },
+                {
+                    "date": 1636486324575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   },\n   report_disciplines: (state) => (id) => {\n     if (typeof state.report.byDisciplines != undefined) {\n       const found = state.report.byDisciplines.find(\n-        (item) => parseInt(item._id) == id\n+        (item) => parseInt(item._id) == pares\n       );\n       return found ? item.count : 0;\n     }\n     return 0;\n"
+                },
+                {
+                    "date": 1636486334234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   },\n   report_disciplines: (state) => (id) => {\n     if (typeof state.report.byDisciplines != undefined) {\n       const found = state.report.byDisciplines.find(\n-        (item) => parseInt(item._id) == pares\n+        (item) => parseInt(item._id) == parseIn\n       );\n       return found ? item.count : 0;\n     }\n     return 0;\n"
+                },
+                {
+                    "date": 1636486352409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,14 +19,16 @@\n   },\n   report_disciplines: (state) => (id) => {\n     if (typeof state.report.byDisciplines != undefined) {\n       const found = state.report.byDisciplines.find(\n-        (item) => parseInt(item._id) == parseIn\n+        (item) => parseInt(item._id) == parseInt(id)\n       );\n       return found ? item.count : 0;\n     }\n     return 0;\n   },\n+\n+  \n };\n \n export const mutations = {\n   appendProgram(state, programs) {\n"
+                },
+                {
+                    "date": 1636486371135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,10 +25,8 @@\n       return found ? item.count : 0;\n     }\n     return 0;\n   },\n-\n-  \n };\n \n export const mutations = {\n   appendProgram(state, programs) {\n"
+                },
+                {
+                    "date": 1636486399251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n     if (typeof state.report.byDisciplines != undefined) {\n       const found = state.report.byDisciplines.find(\n         (item) => parseInt(item._id) == parseInt(id)\n       );\n-      return found ? item.count : 0;\n+      return found ? found.count : 0;\n     }\n     return 0;\n   },\n };\n"
+                },
+                {
+                    "date": 1636486445617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n   count_formatted(state, getters) {\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n   report_disciplines: (state) => (id) => {\n-    if (typeof state.report.byDisciplines != undefined) {\n+    if (typeof state.report.byDisciplines != undefined)  {\n       const found = state.report.byDisciplines.find(\n         (item) => parseInt(item._id) == parseInt(id)\n       );\n       return found ? found.count : 0;\n"
+                },
+                {
+                    "date": 1636486454290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,13 +17,16 @@\n   count_formatted(state, getters) {\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n   report_disciplines: (state) => (id) => {\n-    if (typeof state.report.byDisciplines != undefined)  {\n+    if (\n+      typeof state.report.byDisciplines != undefined &&\n+      state.report.byDisciplines\n+    ) {\n       const found = state.report.byDisciplines.find(\n         (item) => parseInt(item._id) == parseInt(id)\n       );\n-      return found ? found.count : 0;\n+      return found ? item.count : 0;\n     }\n     return 0;\n   },\n };\n"
+                },
+                {
+                    "date": 1636486475298,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,14 +19,14 @@\n   },\n   report_disciplines: (state) => (id) => {\n     if (\n       typeof state.report.byDisciplines != undefined &&\n-      state.report.byDisciplines\n+      state.report.byDisciplines.length\n     ) {\n       const found = state.report.byDisciplines.find(\n         (item) => parseInt(item._id) == parseInt(id)\n       );\n-      return found ? item.count : 0;\n+      return found ? found.count : 0;\n     }\n     return 0;\n   },\n };\n"
+                },
+                {
+                    "date": 1636486496599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n   report_disciplines: (state) => (id) => {\n     if (\n-      typeof state.report.byDisciplines != undefined &&\n+      typeof state.report.byDisciplines != \"undefined\" &&\n       state.report.byDisciplines.length\n     ) {\n       const found = state.report.byDisciplines.find(\n         (item) => parseInt(item._id) == parseInt(id)\n"
+                },
+                {
+                    "date": 1636486747919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,19 +17,25 @@\n   count_formatted(state, getters) {\n     return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n   },\n   report_disciplines: (state) => (id) => {\n-    if (\n-      typeof state.report.byDisciplines != \"undefined\" &&\n-      state.report.byDisciplines.length\n-    ) {\n+    if (typeof state.report.byDisciplines != \"undefined\") {\n       const found = state.report.byDisciplines.find(\n         (item) => parseInt(item._id) == parseInt(id)\n       );\n       return found ? found.count : 0;\n     }\n     return 0;\n   },\n+  report_disciplines: (state) => (id) => {\n+    if (typeof state.report.byDisciplines != \"undefined\") {\n+      const found = state.report.byDisciplines.find(\n+        (item) => parseInt(item._id) == parseInt(id)\n+      );\n+      return found ? found.count : 0;\n+    }\n+    return 0;\n+  },\n };\n \n export const mutations = {\n   appendProgram(state, programs) {\n"
+                },
+                {
+                    "date": 1636486755704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n       return found ? found.count : 0;\n     }\n     return 0;\n   },\n-  report_disciplines: (state) => (id) => {\n+  report_countries: (state) => (id) => {\n     if (typeof state.report.byDisciplines != \"undefined\") {\n       const found = state.report.byDisciplines.find(\n         (item) => parseInt(item._id) == parseInt(id)\n       );\n"
+                },
+                {
+                    "date": 1636486783090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,10 +26,10 @@\n     }\n     return 0;\n   },\n   report_countries: (state) => (id) => {\n-    if (typeof state.report.byDisciplines != \"undefined\") {\n-      const found = state.report.byDisciplines.find(\n+    if (typeof state.report.byCoun != \"undefined\") {\n+      const found = state.report.byCoun.find(\n         (item) => parseInt(item._id) == parseInt(id)\n       );\n       return found ? found.count : 0;\n     }\n"
+                },
+                {
+                    "date": 1636486792993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,10 +26,10 @@\n     }\n     return 0;\n   },\n   report_countries: (state) => (id) => {\n-    if (typeof state.report.byCoun != \"undefined\") {\n-      const found = state.report.byCoun.find(\n+    if (typeof state.report.byCountry != \"undefined\") {\n+      const found = state.report.byCountry.find(\n         (item) => parseInt(item._id) == parseInt(id)\n       );\n       return found ? found.count : 0;\n     }\n"
+                },
+                {
+                    "date": 1636486818340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n       return found ? found.count : 0;\n     }\n     return 0;\n   },\n-  report_countries: (state) => (id) => {\n+  report_location: (state) => (id) => {\n     if (typeof state.report.byCountry != \"undefined\") {\n       const found = state.report.byCountry.find(\n         (item) => parseInt(item._id) == parseInt(id)\n       );\n"
+                },
+                {
+                    "date": 1636486825882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n       return found ? found.count : 0;\n     }\n     return 0;\n   },\n-  report_location: (state) => (id) => {\n+  report_locations: (state) => (id) => {\n     if (typeof state.report.byCountry != \"undefined\") {\n       const found = state.report.byCountry.find(\n         (item) => parseInt(item._id) == parseInt(id)\n       );\n"
+                },
+                {
+                    "date": 1636487071930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n         (item) => parseInt(item._id) == parseInt(id)\n       );\n       return found ? found.count : 0;\n     }\n-    return 0;\n+    return \"0\";\n   },\n };\n \n export const mutations = {\n"
+                },
+                {
+                    "date": 1636487079515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,18 +21,18 @@\n     if (typeof state.report.byDisciplines != \"undefined\") {\n       const found = state.report.byDisciplines.find(\n         (item) => parseInt(item._id) == parseInt(id)\n       );\n-      return found ? found.count : 0;\n+      return found ? found.count : \"0\";\n     }\n     return 0;\n   },\n   report_locations: (state) => (id) => {\n     if (typeof state.report.byCountry != \"undefined\") {\n       const found = state.report.byCountry.find(\n         (item) => parseInt(item._id) == parseInt(id)\n       );\n-      return found ? found.count : 0;\n+      return found ? found.count : \"0\";\n     }\n     return \"0\";\n   },\n };\n"
+                }
+            ],
+            "date": 1636485515258,
+            "name": "Commit-0",
+            "content": "import axios from \"axios\";\naxios.defaults.baseURL = \"http://localhost:3000/api\";\nlet axiosTokens = [];\n\nexport const defaultState = {\n  programs: [],\n  total: null,\n  totalPages: null,\n  report: {},\n};\nexport const state = () => defaultState;\n\nexport const getters = {\n  count(state) {\n    return state.total || 0;\n  },\n  count_formatted(state, getters) {\n    return getters.count.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n  },\n  report_countir\n};\n\nexport const mutations = {\n  appendProgram(state, programs) {\n    programs.forEach((item) => state.programs.push(item));\n  },\n  updatePrograms(state, programs) {\n    state.programs = programs;\n  },\n  updateMeta(state, meta) {\n    state.total = meta.total;\n    state.totalPages = meta.totalPages;\n  },\n  updateReport(state, reports) {\n    state.report = reports;\n  },\n  resetDefault(state, reports) {\n    Object.keys(defaultState).map((k) => (state[k] = defaultState[k]));\n    // defaultState\n    // state = { ...defaultState };\n  },\n};\n\nimport { arr, url } from \"@/plugins/helpers\";\nexport const actions = {\n  async nuxtServerInit({ dispatch }, { query }) {\n    axios.defaults.baseURL = \"http://localhost:3000/api\";\n    return await dispatch(\"query\", query);\n  },\n\n  async query(ctx, params) {\n    params = arr.only(params, [\n      \"page\",\n      \"degree\",\n      \"disciplines\",\n      \"locations\",\n      \"tuition\",\n      \"duration\",\n    ]);\n    if (axiosTokens.length) {\n      // cancel last running requests\n      axiosTokens.forEach((source) => source.cancel());\n    }\n\n    // Axios Cancel Token\n    let source;\n    axiosTokens.push((source = axios.CancelToken.source()));\n    try {\n      const result = await axios.get(\"/programs/?\" + url.toQuery(params), {\n        cancelToken: source.token,\n      });\n      // console.log(result);\n      if (result.status == 200 && result.data) {\n        ctx.commit(\"updateMeta\", result.data.meta);\n        ctx.commit(\"updatePrograms\", result.data.data);\n        ctx.commit(\"updateReport\", result.data.report);\n        return result.data.meta;\n      }\n      throw Error();\n    } catch (e) {\n      console.log(\"[resetDefault]\");\n      ctx.commit(\"resetDefault\");\n    }\n  },\n};\n"
+        }
+    ]
+}

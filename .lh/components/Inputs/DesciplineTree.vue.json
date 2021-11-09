@@ -1,0 +1,74 @@
+{
+    "sourceFile": "components/Inputs/DesciplineTree.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1636484813897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1636484820869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n       >\n         <template v-slot:prepend=\"{ item }\">\n           <Icon :name=\"item.icon\" v-if=\"item.icon\" :size=\"50\" color=\"#5096ec\" />\n         </template>\n-        <template v-slot:prepend=\"{ item }\">\n+        <template v-slot:append=\"{ item }\">\n           <Icon :name=\"item.icon\" v-if=\"item.icon\" :size=\"50\" color=\"#5096ec\" />\n         </template>\n       </v-treeview>\n     </v-card-text>\n"
+                },
+                {
+                    "date": 1636484827004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         <template v-slot:prepend=\"{ item }\">\n           <Icon :name=\"item.icon\" v-if=\"item.icon\" :size=\"50\" color=\"#5096ec\" />\n         </template>\n         <template v-slot:append=\"{ item }\">\n-          <Icon :name=\"item.icon\" v-if=\"item.icon\" :size=\"50\" color=\"#5096ec\" />\n+          v-\n         </template>\n       </v-treeview>\n     </v-card-text>\n   </div>\n"
+                },
+                {
+                    "date": 1636484833427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         <template v-slot:prepend=\"{ item }\">\n           <Icon :name=\"item.icon\" v-if=\"item.icon\" :size=\"50\" color=\"#5096ec\" />\n         </template>\n         <template v-slot:append=\"{ item }\">\n-          v-\n+          <v-chip></v-chip>\n         </template>\n       </v-treeview>\n     </v-card-text>\n   </div>\n"
+                },
+                {
+                    "date": 1636484938495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         <template v-slot:prepend=\"{ item }\">\n           <Icon :name=\"item.icon\" v-if=\"item.icon\" :size=\"50\" color=\"#5096ec\" />\n         </template>\n         <template v-slot:append=\"{ item }\">\n-          <v-chip></v-chip>\n+          <v-chip>item</v-chip>\n         </template>\n       </v-treeview>\n     </v-card-text>\n   </div>\n"
+                },
+                {
+                    "date": 1636485031135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         <template v-slot:prepend=\"{ item }\">\n           <Icon :name=\"item.icon\" v-if=\"item.icon\" :size=\"50\" color=\"#5096ec\" />\n         </template>\n         <template v-slot:append=\"{ item }\">\n-          <v-chip>item</v-chip>\n+          <v-chip x-large>{{ item.id }}</v-chip>\n         </template>\n       </v-treeview>\n     </v-card-text>\n   </div>\n"
+                },
+                {
+                    "date": 1636485045769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         <template v-slot:prepend=\"{ item }\">\n           <Icon :name=\"item.icon\" v-if=\"item.icon\" :size=\"50\" color=\"#5096ec\" />\n         </template>\n         <template v-slot:append=\"{ item }\">\n-          <v-chip x-large>{{ item.id }}</v-chip>\n+          <v-chip x-small de>{{ item.id }}</v-chip>\n         </template>\n       </v-treeview>\n     </v-card-text>\n   </div>\n"
+                },
+                {
+                    "date": 1636485097631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         <template v-slot:prepend=\"{ item }\">\n           <Icon :name=\"item.icon\" v-if=\"item.icon\" :size=\"50\" color=\"#5096ec\" />\n         </template>\n         <template v-slot:append=\"{ item }\">\n-          <v-chip x-small de>{{ item.id }}</v-chip>\n+          <v-chip x-small outlined>{{ item.id }}</v-chip>\n         </template>\n       </v-treeview>\n     </v-card-text>\n   </div>\n"
+                },
+                {
+                    "date": 1636485830559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,11 @@\n     // by this way we prevent to data being load several time\n     this.$nextTick(() => {\n       this.dataLoaded = true;\n     })\n-  },\n+  },computed:{\n+    \n+  }\n   watch: {\n     selection(values) {\n       if (!this.dataLoaded)\n         return;\n"
+                },
+                {
+                    "date": 1636485863118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,11 +48,9 @@\n     // by this way we prevent to data being load several time\n     this.$nextTick(() => {\n       this.dataLoaded = true;\n     })\n-  },computed:{\n-    \n-  }\n+  }, tore.getters.getTodoById\n   watch: {\n     selection(values) {\n       if (!this.dataLoaded)\n         return;\n"
+                },
+                {
+                    "date": 1636485871553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n     // by this way we prevent to data being load several time\n     this.$nextTick(() => {\n       this.dataLoaded = true;\n     })\n-  }, tore.getters.getTodoById\n+  }, tore.getters.report_disciplines\n   watch: {\n     selection(values) {\n       if (!this.dataLoaded)\n         return;\n"
+                },
+                {
+                    "date": 1636485880508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n     // by this way we prevent to data being load several time\n     this.$nextTick(() => {\n       this.dataLoaded = true;\n     })\n-  }, tore.getters.report_disciplines\n+  }, torstoree.getters.report_disciplines\n   watch: {\n     selection(values) {\n       if (!this.dataLoaded)\n         return;\n"
+                },
+                {
+                    "date": 1636485887989,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n     // by this way we prevent to data being load several time\n     this.$nextTick(() => {\n       this.dataLoaded = true;\n     })\n-  }, torstoree.getters.report_disciplines\n+  }, \n   watch: {\n     selection(values) {\n       if (!this.dataLoaded)\n         return;\n"
+                },
+                {
+                    "date": 1636485896110,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         <template v-slot:prepend=\"{ item }\">\n           <Icon :name=\"item.icon\" v-if=\"item.icon\" :size=\"50\" color=\"#5096ec\" />\n         </template>\n         <template v-slot:append=\"{ item }\">\n-          <v-chip x-small outlined>{{ item.id }}</v-chip>\n+          <v-chip x-small outlined>{{ $sote.getters.report_disciplines(item.id) }}</v-chip>\n         </template>\n       </v-treeview>\n     </v-card-text>\n   </div>\n"
+                },
+                {
+                    "date": 1636485923616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,11 @@\n         <template v-slot:prepend=\"{ item }\">\n           <Icon :name=\"item.icon\" v-if=\"item.icon\" :size=\"50\" color=\"#5096ec\" />\n         </template>\n         <template v-slot:append=\"{ item }\">\n-          <v-chip x-small outlined>{{ $sote.getters.report_disciplines(item.id) }}</v-chip>\n+          <v-chip x-small outlined>{{\n+            $store.getters.report_disciplines(item.id)\n+          }}</v-chip>\n         </template>\n       </v-treeview>\n     </v-card-text>\n   </div>\n@@ -48,9 +50,9 @@\n     // by this way we prevent to data being load several time\n     this.$nextTick(() => {\n       this.dataLoaded = true;\n     })\n-  }, \n+  },\n   watch: {\n     selection(values) {\n       if (!this.dataLoaded)\n         return;\n"
+                }
+            ],
+            "date": 1636484813897,
+            "name": "Commit-0",
+            "content": "<template>\n  <div>\n    <v-card-text>\n      <v-row>\n        <v-subheader\n          :class=\"{ 'blue--text': selection.length }\"\n          @click=\"moveTemp\"\n          >Disciplines</v-subheader\n        ></v-row\n      >\n      <v-treeview\n        v-model=\"selection\"\n        :items=\"items\"\n        selection-type=\"leaf\"\n        selectable\n        return-object\n        dense\n      >\n        <template v-slot:prepend=\"{ item }\">\n          <Icon :name=\"item.icon\" v-if=\"item.icon\" :size=\"50\" color=\"#5096ec\" />\n        </template>\n        <template v-slot:prepend=\"{ item }\">\n          <Icon :name=\"item.icon\" v-if=\"item.icon\" :size=\"50\" color=\"#5096ec\" />\n        </template>\n      </v-treeview>\n    </v-card-text>\n  </div>\n</template>\n\n<script>\nimport disciplines from '@/assets/json/disciplines.json'\nimport { url } from '@/plugins/helpers'\nlet _ = require('lodash');\nlet tempData = []\nexport default {\n  data: () => ({\n    dataLoaded: false,\n    selection: [],\n    items: [],\n  }),\n  mounted() {\n    this.items = disciplines;\n    if (this.$route.query.disciplines) {\n      this.$route.query.disciplines.split(',').map(id => {\n        this.selection.push({ name: '', id })\n      });\n    }\n    // by this way we prevent to data being load several time\n    this.$nextTick(() => {\n      this.dataLoaded = true;\n    })\n  },\n  watch: {\n    selection(values) {\n      if (!this.dataLoaded)\n        return;\n      let params = this.$route.query;\n      params['page'] = 1\n      params['disciplines'] = _.map(values, 'id').join(',');\n      url.push(params).then((params) => {\n        this.$store.dispatch(\"query\", params)\n      })\n    }\n  },\n  methods: {\n    moveTemp() {\n      if (this.selection.length) {\n        tempData = this.selection.slice(0);\n        this.selection = []\n      }\n      else {\n        this.selection = tempData.slice(0)\n        tempData = []\n      }\n    },\n  }\n}\n</script>\n\n<style scoped>\n.v-subheader {\n  cursor: pointer;\n  -webkit-touch-callout: none !important;\n  -webkit-user-select: none !important;\n  -khtml-user-select: none !important;\n  -moz-user-select: none !important;\n  -ms-user-select: none !important;\n  user-select: none !important;\n}\n</style>"
+        }
+    ]
+}

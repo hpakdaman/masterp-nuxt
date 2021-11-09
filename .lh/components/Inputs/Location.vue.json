@@ -1,0 +1,34 @@
+{
+    "sourceFile": "components/Inputs/Location.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1636486855031,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1636486862702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n           </v-badge>\n         </template>\n \n         <template v-slot:item=\"{ item }\">\n-          <v-badge class=\"mr-5 mt-2 mb-1\" :content=\"            $store.getters.report_disciplines(item.id)\" inline>\n+          <v-badge class=\"mr-5 mt-2 mb-1\" :content=\"            $store.getters.report_countries(item.id)\" inline>\n             {{ item.name }}\n           </v-badge>\n         </template>\n       </v-combobox>\n"
+                },
+                {
+                    "date": 1636486904163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,13 @@\n           </v-badge>\n         </template>\n \n         <template v-slot:item=\"{ item }\">\n-          <v-badge class=\"mr-5 mt-2 mb-1\" :content=\"            $store.getters.report_countries(item.id)\" inline>\n+          <v-badge\n+            class=\"mr-5 mt-2 mb-1\"\n+            :content=\"$store.getters.report_locations(item.id)\"\n+            inline\n+          >\n             {{ item.name }}\n           </v-badge>\n         </template>\n       </v-combobox>\n"
+                },
+                {
+                    "date": 1636486928923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,13 +31,9 @@\n           </v-badge>\n         </template>\n \n         <template v-slot:item=\"{ item }\">\n-          <v-badge\n-            class=\"mr-5 mt-2 mb-1\"\n-            :content=\"$store.getters.report_locations(item.id)\"\n-            inline\n-          >\n+          <v-badge class=\"mr-5 mt-2 mb-1\" :content=\"item.id\" inline>\n             {{ item.name }}\n           </v-badge>\n         </template>\n       </v-combobox>\n"
+                },
+                {
+                    "date": 1636486940737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n           <v-badge\n             class=\"mr-5 mt-2 mb-1\"\n             bordered\n             color=\"info\"\n-            :content=\"item.id\"\n+            :content=\"$store.getters.report_locations(item.id)\"\n             overlap\n           >\n             <v-btn\n               class=\"white--text\"\n"
+                }
+            ],
+            "date": 1636486855031,
+            "name": "Commit-0",
+            "content": "<template>\n  <div>\n    <v-card-text>\n      <v-combobox\n        v-model=\"locations\"\n        :items=\"items\"\n        label=\"Locations\"\n        item-text=\"name\"\n        item-value=\"id\"\n        multiple\n        chips\n        small-chips\n        deletable-chips\n      >\n        <template v-slot:selection=\"{ item }\">\n          <v-badge\n            class=\"mr-5 mt-2 mb-1\"\n            bordered\n            color=\"info\"\n            :content=\"item.id\"\n            overlap\n          >\n            <v-btn\n              class=\"white--text\"\n              @click=\"removeSelected(item.id)\"\n              color=\"info\"\n              depressed\n            >\n              {{ item.name }}\n            </v-btn>\n          </v-badge>\n        </template>\n\n        <template v-slot:item=\"{ item }\">\n          <v-badge class=\"mr-5 mt-2 mb-1\" :content=\"            $store.getters.report_disciplines(item.id)\" inline>\n            {{ item.name }}\n          </v-badge>\n        </template>\n      </v-combobox>\n    </v-card-text>\n  </div>\n</template>\n\n<script> \nimport countries from '@/assets/json/countries.json'\nimport { url } from '@/plugins/helpers'\nlet _ = require('lodash');\n\nexport default {\n  data() {\n    return {\n      dataLoaded: false,\n      locations: [],\n      items: [],\n    }\n  },\n  mounted() {\n    this.items = countries\n    if (this.$route.query.locations)\n      this.$route.query.locations.split(',').map(id => {\n        const item = _.find(this.items, ['id', id])\n        this.locations.push({ id, 'name': item ? item.name : '' })\n      });\n\n    // by this way we prevent to data being load several time\n    this.$nextTick(() => {\n      this.dataLoaded = true;\n    })\n  },\n  watch: {\n    locations(values) {\n      if (!this.dataLoaded)\n        return;\n      let params = this.$route.query;\n      params['page'] = 1\n      params['locations'] = _.map(values, 'id').join(',');\n      url.push(params).then((params) => {\n        this.$store.dispatch('query', params)\n      })\n    },\n  },\n  methods: {\n    removeSelected(id) {\n      this.locations = _.filter(this.locations, item => item.id != id)\n    }\n  }\n}\n</script>"
+        }
+    ]
+}

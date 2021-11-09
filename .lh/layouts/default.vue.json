@@ -1,0 +1,30 @@
+{
+    "sourceFile": "layouts/default.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1636485177805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1636485183795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\n-  <v-app dark f>\n+  <v-app dark>\n     <v-app-bar\n       fixed\n       app\n       src=\"https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg\"\n@@ -12,9 +12,9 @@\n       </v-btn>\n     </v-app-bar>\n \n     <v-main>\n-      <v-container>\n+      <v-container fluid>\n         <Nuxt />\n       </v-container>\n     </v-main>\n \n"
+                },
+                {
+                    "date": 1636485209713,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         <v-icon>mdi-menu</v-icon>\n       </v-btn>\n     </v-app-bar>\n \n-    <v-main>\n+    <v-main fluid>\n       <v-container fluid>\n         <Nuxt />\n       </v-container>\n     </v-main>\n"
+                },
+                {
+                    "date": 1636485214779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         <v-icon>mdi-menu</v-icon>\n       </v-btn>\n     </v-app-bar>\n \n-    <v-main fluid>\n+    <v-main>\n       <v-container fluid>\n         <Nuxt />\n       </v-container>\n     </v-main>\n"
+                }
+            ],
+            "date": 1636485177805,
+            "name": "Commit-0",
+            "content": "<template>\n  <v-app dark f>\n    <v-app-bar\n      fixed\n      app\n      src=\"https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg\"\n    >\n      <v-toolbar-title v-text=\"title\" style=\"color: #fff\" />\n      <v-spacer />\n      <v-btn icon @click.stop=\"rightDrawer = !rightDrawer\">\n        <v-icon>mdi-menu</v-icon>\n      </v-btn>\n    </v-app-bar>\n\n    <v-main>\n      <v-container>\n        <Nuxt />\n      </v-container>\n    </v-main>\n\n    <v-navigation-drawer v-model=\"rightDrawer\" :right=\"right\" temporary fixed>\n      <v-list>\n        <v-list-item>\n          <v-list-item-action>\n            <v-icon light> mdi-heart </v-icon>\n          </v-list-item-action>\n          <v-list-item-title>Favourites</v-list-item-title>\n        </v-list-item>\n      </v-list>\n    </v-navigation-drawer>\n    <v-footer :absolute=\"!fixed\" app>\n      <span>&copy; {{ new Date().getFullYear() }}</span>\n    </v-footer>\n  </v-app>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      clipped: false,\n      drawer: false,\n      fixed: false,\n      miniVariant: false,\n      right: true,\n      rightDrawer: false,\n      title: 'Universities',\n    }\n  }\n}\n</script>\n"
+        }
+    ]
+}

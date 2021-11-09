@@ -1,0 +1,18 @@
+{
+    "sourceFile": "components/UI/Breadcrump.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1636485249619,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1636485249619,
+            "name": "Commit-0",
+            "content": "<template>\n  <div justify=\"left pl-13\">\n    <v-breadcrumbs :items=\"items\"></v-breadcrumbs>\n  </div>\n</template>\n<script>\nexport default {\n  props: {\n    items: {\n      type: Array,\n      required: true\n    }\n  }\n}\n</script>\n"
+        }
+    ]
+}

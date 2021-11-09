@@ -1,0 +1,46 @@
+{
+    "sourceFile": "pages/index.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1636485011379,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1636485018739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,13 @@\n   <v-sheet>\n     <Breadcrump :items=\"breadcrumbs\" />\n     <v-container>\n       <v-row>\n-        <v-col lg=\"5\" md=\"4\" sm=\"12\" xs=\"12\">\n+        <v-col lg=\"5\" md=\"5\" sm=\"12\" xs=\"12\">\n           <Sidebar />\n         </v-col>\n \n-        <v-col lg=\"8\" md=\"8\" sm=\"12\" xs=\"12\">\n+        <v-col lg=\"8\" md=\"7\" sm=\"12\" xs=\"12\">\n           <v-container>\n             <ProgramList />\n           </v-container>\n         </v-col>\n"
+                },
+                {
+                    "date": 1636485146875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         <v-col lg=\"5\" md=\"5\" sm=\"12\" xs=\"12\">\n           <Sidebar />\n         </v-col>\n \n-        <v-col lg=\"8\" md=\"7\" sm=\"12\" xs=\"12\">\n+        <v-col lg=\"8\" md=\"8\" sm=\"12\" xs=\"12\">\n           <v-container>\n             <ProgramList />\n           </v-container>\n         </v-col>\n"
+                },
+                {
+                    "date": 1636485153060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,13 @@\n   <v-sheet>\n     <Breadcrump :items=\"breadcrumbs\" />\n     <v-container>\n       <v-row>\n-        <v-col lg=\"5\" md=\"5\" sm=\"12\" xs=\"12\">\n+        <v-col lg=\"5\" md=\"4\" sm=\"12\" xs=\"12\">\n           <Sidebar />\n         </v-col>\n \n-        <v-col lg=\"8\" md=\"8\" sm=\"12\" xs=\"12\">\n+        <v-col lg=\"7\" md=\"8\" sm=\"12\" xs=\"12\">\n           <v-container>\n             <ProgramList />\n           </v-container>\n         </v-col>\n"
+                },
+                {
+                    "date": 1636485230365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n <template>\n   <v-sheet>\n     <Breadcrump :items=\"breadcrumbs\" />\n-    <v-container>\n       <v-row>\n         <v-col lg=\"5\" md=\"4\" sm=\"12\" xs=\"12\">\n           <Sidebar />\n         </v-col>\n"
+                },
+                {
+                    "date": 1636485271036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,19 +1,18 @@\n <template>\n   <v-sheet>\n     <Breadcrump :items=\"breadcrumbs\" />\n-      <v-row>\n-        <v-col lg=\"5\" md=\"4\" sm=\"12\" xs=\"12\">\n-          <Sidebar />\n-        </v-col>\n+    <v-row>\n+      <v-col lg=\"4\" md=\"4\" sm=\"12\" xs=\"12\">\n+        <Sidebar />\n+      </v-col>\n \n-        <v-col lg=\"7\" md=\"8\" sm=\"12\" xs=\"12\">\n-          <v-container>\n-            <ProgramList />\n-          </v-container>\n-        </v-col>\n-      </v-row>\n-    </v-container>\n+      <v-col lg=\"7\" md=\"8\" sm=\"12\" xs=\"12\">\n+        <v-container>\n+          <ProgramList />\n+        </v-container>\n+      </v-col>\n+    </v-row>\n   </v-sheet>\n </template>\n \n \n"
+                },
+                {
+                    "date": 1636485284841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n <template>\n   <v-sheet>\n     <Breadcrump :items=\"breadcrumbs\" />\n     <v-row>\n-      <v-col lg=\"4\" md=\"4\" sm=\"12\" xs=\"12\">\n+      <v-col lg=\"3\" md=\"4\" sm=\"12\" xs=\"12\">\n         <Sidebar />\n       </v-col>\n \n-      <v-col lg=\"7\" md=\"8\" sm=\"12\" xs=\"12\">\n+      <v-col lg=\"8\" md=\"8\" sm=\"12\" xs=\"12\">\n         <v-container>\n           <ProgramList />\n         </v-container>\n       </v-col>\n"
+                },
+                {
+                    "date": 1636485307268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <template>\n   <v-sheet>\n     <Breadcrump :items=\"breadcrumbs\" />\n     <v-row>\n-      <v-col lg=\"3\" md=\"4\" sm=\"12\" xs=\"12\">\n+      <v-col lg=\"4\" md=\"4\" sm=\"12\" xs=\"12\">\n         <Sidebar />\n       </v-col>\n \n       <v-col lg=\"8\" md=\"8\" sm=\"12\" xs=\"12\">\n"
+                }
+            ],
+            "date": 1636485011379,
+            "name": "Commit-0",
+            "content": "<template>\n  <v-sheet>\n    <Breadcrump :items=\"breadcrumbs\" />\n    <v-container>\n      <v-row>\n        <v-col lg=\"5\" md=\"4\" sm=\"12\" xs=\"12\">\n          <Sidebar />\n        </v-col>\n\n        <v-col lg=\"8\" md=\"8\" sm=\"12\" xs=\"12\">\n          <v-container>\n            <ProgramList />\n          </v-container>\n        </v-col>\n      </v-row>\n    </v-container>\n  </v-sheet>\n</template>\n\n\n<script>\nimport Sidebar from \"@/components/Sidebar\"\nimport ProgramList from \"@/components/ProgramList\"\nimport Breadcrump from '@/components/UI/Breadcrump'\n\nexport default {\n  components: {\n    Sidebar,\n    ProgramList,\n    Breadcrump,\n  },\n  data() {\n    return {\n      breadcrumbs: [\n        {\n          disabled: false,\n          href: '/',\n          link: true,\n          text: 'Homepage',\n        },\n        {\n          disabled: false,\n          href: '/',\n          link: true,\n          text: 'Universities',\n        }\n      ]\n    }\n  }\n}\n</script>"
+        }
+    ]
+}
