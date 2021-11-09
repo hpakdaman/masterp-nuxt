@@ -1,5 +1,5 @@
 <template>
-  <v-sheet>
+  <v-col lg="10" class="offset-lg-1">
     <Breadcrump :items="breadcrumbs" />
     <v-row>
       <v-col lg="4" md="4" sm="12" xs="12">
@@ -12,7 +12,7 @@
         </v-container>
       </v-col>
     </v-row>
-  </v-sheet>
+  </v-col>
 </template>
 
 

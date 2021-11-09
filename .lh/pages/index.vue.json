@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 14,
             "patches": [
                 {
                     "date": 1636485011379,
@@ -36,6 +36,34 @@
                 {
                     "date": 1636485307268,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <template>\n   <v-sheet>\n     <Breadcrump :items=\"breadcrumbs\" />\n     <v-row>\n-      <v-col lg=\"3\" md=\"4\" sm=\"12\" xs=\"12\">\n+      <v-col lg=\"4\" md=\"4\" sm=\"12\" xs=\"12\">\n         <Sidebar />\n       </v-col>\n \n       <v-col lg=\"8\" md=\"8\" sm=\"12\" xs=\"12\">\n"
+                },
+                {
+                    "date": 1636487546104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\n-  <v-sheet>\n+  <v-col cols=\"10\">\n     <Breadcrump :items=\"breadcrumbs\" />\n     <v-row>\n       <v-col lg=\"4\" md=\"4\" sm=\"12\" xs=\"12\">\n         <Sidebar />\n@@ -11,9 +11,9 @@\n           <ProgramList />\n         </v-container>\n       </v-col>\n     </v-row>\n-  </v-sheet>\n+  </v-col>\n </template>\n \n \n <script>\n"
+                },
+                {
+                    "date": 1636487554812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\n-  <v-col cols=\"10\">\n+  <v-col cols=\"10\" col->\n     <Breadcrump :items=\"breadcrumbs\" />\n     <v-row>\n       <v-col lg=\"4\" md=\"4\" sm=\"12\" xs=\"12\">\n         <Sidebar />\n"
+                },
+                {
+                    "date": 1636487562006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\n-  <v-col cols=\"10\" col->\n+  <v-col cols=\"10\" class=\"col-offset-1\">\n     <Breadcrump :items=\"breadcrumbs\" />\n     <v-row>\n       <v-col lg=\"4\" md=\"4\" sm=\"12\" xs=\"12\">\n         <Sidebar />\n"
+                },
+                {
+                    "date": 1636487610546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\n-  <v-col cols=\"10\" class=\"col-offset-1\">\n+  <v-col cols=\"10\" class=\"offset-1\">\n     <Breadcrump :items=\"breadcrumbs\" />\n     <v-row>\n       <v-col lg=\"4\" md=\"4\" sm=\"12\" xs=\"12\">\n         <Sidebar />\n"
+                },
+                {
+                    "date": 1636487632491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\n-  <v-col cols=\"10\" class=\"offset-1\">\n+  <v-col cols=\"10\" class=\"offset-lg-1\">\n     <Breadcrump :items=\"breadcrumbs\" />\n     <v-row>\n       <v-col lg=\"4\" md=\"4\" sm=\"12\" xs=\"12\">\n         <Sidebar />\n"
+                },
+                {
+                    "date": 1636487646600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\n-  <v-col cols=\"10\" class=\"offset-lg-1\">\n+  <v-col cols-g=\"10\" class=\"offset-lg-1\">\n     <Breadcrump :items=\"breadcrumbs\" />\n     <v-row>\n       <v-col lg=\"4\" md=\"4\" sm=\"12\" xs=\"12\">\n         <Sidebar />\n"
+                },
+                {
+                    "date": 1636487692907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\n-  <v-col cols-g=\"10\" class=\"offset-lg-1\">\n+  <v-col cols=\"10\" class=\"offset-lg-1\">\n     <Breadcrump :items=\"breadcrumbs\" />\n     <v-row>\n       <v-col lg=\"4\" md=\"4\" sm=\"12\" xs=\"12\">\n         <Sidebar />\n"
                 }
             ],
             "date": 1636485011379,
