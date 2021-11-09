@@ -17,6 +17,24 @@ export const getters = {
   count_formatted(state, getters) {
     return getters.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   },
+  report_disciplines: (state) => (id) => {
+    if (typeof state.report.byDisciplines != "undefined") {
+      const found = state.report.byDisciplines.find(
+        (item) => parseInt(item._id) == parseInt(id)
+      );
+      return found ? found.count : "0";
+    }
+    return "0";
+  },
+  report_locations: (state) => (id) => {
+    if (typeof state.report.byCountry != "undefined") {
+      const found = state.report.byCountry.find(
+        (item) => parseInt(item._id) == parseInt(id)
+      );
+      return found ? found.count : "0";
+    }
+    return "0";
+  },
 };
 
 export const mutations = {

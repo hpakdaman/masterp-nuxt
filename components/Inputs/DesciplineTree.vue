@@ -19,6 +19,11 @@
         <template v-slot:prepend="{ item }">
           <Icon :name="item.icon" v-if="item.icon" :size="50" color="#5096ec" />
         </template>
+        <template v-slot:append="{ item }">
+          <v-chip x-small outlined>{{
+            $store.getters.report_disciplines(item.id)
+          }}</v-chip>
+        </template>
       </v-treeview>
     </v-card-text>
   </div>

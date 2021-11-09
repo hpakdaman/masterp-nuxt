@@ -1,19 +1,17 @@
 <template>
   <v-sheet>
     <Breadcrump :items="breadcrumbs" />
-    <v-container>
-      <v-row>
-        <v-col lg="4" md="4" sm="12" xs="12">
-          <Sidebar />
-        </v-col>
+    <v-row>
+      <v-col lg="4" md="4" sm="12" xs="12">
+        <Sidebar />
+      </v-col>
 
-        <v-col lg="8" md="8" sm="12" xs="12">
-          <v-container>
-            <ProgramList />
-          </v-container>
-        </v-col>
-      </v-row>
-    </v-container>
+      <v-col lg="8" md="8" sm="12" xs="12">
+        <v-container>
+          <ProgramList />
+        </v-container>
+      </v-col>
+    </v-row>
   </v-sheet>
 </template>
 

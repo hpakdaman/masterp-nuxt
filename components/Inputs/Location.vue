@@ -17,7 +17,7 @@
             class="mr-5 mt-2 mb-1"
             bordered
             color="info"
-            :content="item.id"
+            :content="$store.getters.report_locations(item.id)"
             overlap
           >
             <v-btn
@@ -32,7 +32,11 @@
         </template>
 
         <template v-slot:item="{ item }">
-          <v-badge class="mr-5 mt-2 mb-1" :content="item.id" inline>
+          <v-badge
+            class="mr-5 mt-2 mb-1"
+            :content="$store.getters.report_locations(item.id)"
+            inline
+          >
             {{ item.name }}
           </v-badge>
         </template>

@@ -1,7 +1,7 @@
 <template>
-  <v-container justify="left pl-13">
+  <div justify="left pl-13">
     <v-breadcrumbs :items="items"></v-breadcrumbs>
-  </v-container>
+  </div>
 </template>
 <script>
 export default {
